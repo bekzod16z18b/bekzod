@@ -1,0 +1,23 @@
+{% extends 'Quiz/dependencies.html' %}
+{% load static%}
+{% block content %}
+<div class="container jumbotron">
+    <form method="POST" action="">
+        {% csrf_token %}
+    <div class="form-group">
+    <label for="exampleInputEmail1">Login</label>
+    <input type="text" class="form-control"  name="username">
+     </div>
+    <div class="form-group">
+    <label for="exampleInputPassword1">Parol</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+    </div>
+        <p>
+        <button type="submit" class="btn btn-secondary btn-lg btn-block" value="Login">Tizimga kirish</button>
+        <br>
+        <input class="form-control" type="text" placeholder="Ro‘yxatdan o‘tish tugmasini tanlab ro‘yxatdan o‘tishngiz kerak!" readonly>
+       <br>
+       <a type="button" class="btn btn-primary btn-lg btn-block" href='{% url 'register' %}'>Ro‘yxatdan o‘tish</a></p>
+       </form>
+</div>
+{% endblock %}

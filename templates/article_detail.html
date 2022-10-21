@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="card" >
+          <div class="card-body">
+
+              <h1 class="card-title">{{ object.title }}</h1>
+              <h6 class="card-subtitle mb-2 text-muted">Muallif: {{ object.author }} | {{ object.date }}</h6>
+              <p class="card-text">{{ object.body | safe}}</p>
+              <a href="{% url 'article_edit' article.pk %}">Tahrirlash</a> |
+              <a href="{% url 'article_delete' article.pk %}">O'chirish</a> |
+              <a href="{% url 'article_list' %}">Barcha postlar</a>
+          </div>
+            <div class="card">
+                <div class="card-header"><a href="{% url 'article_list' %}">Bizning ijtimoiy tarmoqlarimizni kuzatib boring</a></div>
+            </div>
+        </div>
+        <p></p>
+    </div>
+{% endblock content %}

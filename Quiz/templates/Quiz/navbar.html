@@ -1,0 +1,44 @@
+{% load static %}
+
+
+<style>
+  .greet{
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+
+    <ul class="navbar-nav">
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">
+          <img src="https://filin.mail.ru/pic?email=bekzod1106%40mail.ru&width=180&height=180&name=Bekzod+Xoliqulov&version=4&build=7&_=1641838183291.503" alt="Avatar Logo" style="width:28px;" class="rounded-pill">
+          AXBOROT TEXNOLOGIYALARI KAFEDRASI</a>
+      </li>
+
+      <li class="nav-item active">
+        
+      {% if request.user.is_staff %}
+      </li>
+      <li>
+        <!-- -->
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'addQuestion' %}">TEST QO'SHISH</a>
+      </li>
+      {% endif %} 
+
+
+     </ul>
+  </div>
+
+ <!-- <span class="greet">Salom, {{user}}</span> -->
+
+</nav>

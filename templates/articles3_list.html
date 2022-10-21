@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Postlar{% endblock title %}
+
+{% block content %}
+{#    <div class="card-group">#}
+    {% for articles3 in object_list %}
+        <div class="card">
+            <div class="card-header">
+                <span class="font-weight-bold"><h3>{{ articles3.title }}</h3></span>
+            </div>
+
+            <div class="card-body">
+                {{ articles3.summary }}<a href="{% url 'articles3_detail' articles3.pk  %}">Matni to'liq ko'rish uchun shu yerni tanlang!</a>
+            </div>
+            <div class="card-footer text-left text-muted">
+                <span class="text-muted">muallif {{ articles3.author | title }} &middot; {{ articles3.date }}</span>
+            </div>
+{#        </div>#}
+        <br />
+    {% endfor %}
+    </div>
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Postlar{% endblock title %}
+
+{% block content %}
+{#    <div class="card-group">#}
+    {% for practical in object_list %}
+        <div class="card">
+            <div class="card-header">
+                <span class="font-weight-bold"><h3>{{ practical.title }}</h3></span>
+            </div>
+
+            <div class="card-body">
+                {{ practical.summary }}<a href="{% url 'practical_detail' practical.pk  %}"> Matni to'liq ko'rish uchun shu yerni tanlang!</a>
+            </div>
+            <div class="card-footer text-left text-muted">
+                <span class="text-muted">muallif {{ practical.author | title }} &middot; {{ practical.date }}</span>
+            </div>
+{#        </div>#}
+        <br />
+    {% endfor %}
+    </div>
+{% endblock content %}

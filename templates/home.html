@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Bosh sahifa{% endblock title %}
+
+{% block content %}
+<!-- ################################################################################################ -->
+<div class="bgded overlay" style="background-image:url({% static 'images/demo/backgrounds/1.jpg' %});">
+  <div id="pageintro" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <article>
+      <h3 class="heading">Obyektga yo'naltirilgan dasturlash tillari</h3>
+       </article>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<div class="bgded overlay light" style="background-image:url({% static 'images/demo/backgrounds/2.jpg'%});">
+  <section id="services" class="hoc container clear">
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+     <h6 class="heading font-x2">Fanlar majmuasi</h6>
+    </div>
+    <ul class="nospace group elements elements-three">
+      <li class="one_third">
+        <article><a href="{% url 'article_list' %}"><i class="fas fa-hourglass-half"></i></a>
+          <h6 class="heading">C++ dasturlash tili</h6>
+          <p>Siz bu bo'limda c++ dasturlash tili ma'lumotlari bilan tanishasiz.</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="{% url 'practical_list' %}"><i class="fas fa-paw"></i></a>
+          <h6 class="heading">Python dasturlash tili</h6>
+          <p>Siz bu bo'limda python dasturlash tili ma'lumotlari bilan tanishasiz.</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="{% url 'articles1_list' %}"><i class="fas fa-sliders-h"></i></a>
+          <h6 class="heading">Django web framework</h6>
+          <p>Siz bu bo'limda django web framework ma'lumotlari bilan tanishasiz.</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="{% url 'articles2_list' %}"><i class="fas fa-tty"></i></a>
+          <h6 class="heading">Axborot texnologiyalari </h6>
+          <p>Siz bu bo'limda axborot texnologiyalari fani ma'lumotlari bilan tanishasiz.</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="{% url 'articles3_list' %}"><i class="fas fa-table"></i></a>
+          <h6 class="heading">Texnik tizimlarda AT </h6>
+          <p>Siz bu bo'limda texnik tizimlarda at fani ma'lumotlari bilan tanishasiz.</p>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="{% url 'articles4_list' %}"><i class="fas fa-hand-holding-usd"></i></a>
+          <h6 class="heading">Axborot texnologiyalari va JMM</h6>
+          <p>Siz bu bo'limda axborot texnologiyalari va jmm fani ma'lumotlari bilan tanishasiz.</p>
+        </article>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+
+<div class="wrapper row3">
+
+<!-- ################################################################################################ -->
+
+  <br>
+  <div class="wrapper row3">
+  <main class="hoc container clear">
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <section class="group shout">
+      <figure class="one_half first"><img src="{% static 'images/demo/546x356.jpg' %}" alt="">
+        <figcaption class="heading"><a href="{% url 'homea' %}">Online Test</a></figcaption>
+      </figure>
+      <figure class="one_half"><img src="{% static 'images/demo/546x356.jpeg' %}" alt="">
+        <figcaption class="heading"><a href="{% url 'compiler_new' %}">Online dasturlash tili</a></figcaption>
+      </figure>
+    </section>
+    <section class="group shout">
+      <figure class="one_half first"><img src="{% static 'images/demo/546x356.png' %}" alt="">
+        <figcaption class="heading"><a href="{% url 'suzgame' %}">So'z topish o'yini</a></figcaption>
+      </figure>
+      <figure class="one_half"><img src="{% static 'images/demo/123.jpg' %}" alt="">
+        <figcaption class="heading"><a href="{% url 'songame' %}">Son topish o'yini</a></figcaption>
+      </figure>
+    </section>
+    <!-- ################################################################################################ -->
+    <!-- / main body  https://onlinepython.herokuapp.com -->
+   </main>
+</div>
+
+  <br>
+<div class="wrapper coloured" style="background-image:url({% static 'images/demo/backgrounds/3.jpg'%});">
+
+  <section id="testimonials" class="hoc container clear">
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+     <h6 class="heading font-x2">Masul o'qituvchilar</h6>
+    </div>
+    <article class="one_half first">
+      <figure class="clear"><img src="{% static 'images/demo/100x100n.JPG' %}" alt="">
+        <figcaption>
+          <h6 class="heading">Ergashev Nuriddin G‘ayratovich</h6>
+          </figcaption>
+      </figure>
+      <blockquote>Qarshi muhandislik-iqtisodiyot instituti axborot texnologiyalari kafedrasi  dotsenti.</blockquote>
+    </article>
+    <article class="one_half">
+      <figure class="clear"><img src="{% static 'images/demo/100x100b.JPG' %}" alt="">
+        <figcaption>
+          <h6 class="heading">Xoliqulov Bekzod Jovliyevich</h6>
+          </figcaption>
+      </figure>
+      <blockquote>Qarshi muhandislik-iqtisodiyot instituti axborot texnologiyalari kafedrasi  katta o'qituvchisi.</blockquote>
+    </article>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+
+
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <section class="hoc container clear">
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading font-x2">Video darslar</h6>
+    </div>
+    <ul id="latest" class="nospace group">
+      <li class="one_third first">
+        <article><a class="imgover" href="{% url 'index_c' %}"><img src="{% static 'images/demo/348x261c.jpg' %}" alt=""></a>
+          <ul class="nospace meta clear">
+            <li><i class="fas fa-user"></i> <a href="{% url 'index_c' %}">Admin</a></li>
+            <li><i class="fas fa-comments"></i> <a href="{% url 'index_c' %}">Comments (50)</a></li>
+          </ul>
+          <div class="excerpt">
+            <time datetime="2045-04-05T08:15+00:00">03 Fevral 2022</time>
+            <p class="heading"><a href="{% url 'index_c' %}">C++ dasturlash tilini mukammal o`rganish uchun video darsliklar</a></p>
+          </div>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a class="imgover" href="{% url 'index_p' %}"><img src="{% static 'images/demo/348x261p.jpg' %}" alt=""></a>
+          <ul class="nospace meta clear">
+            <li><i class="fas fa-user"></i> <a href="{% url 'index_p' %}">Admin</a></li>
+            <li><i class="fas fa-comments"></i> <a href="{% url 'index_p' %}">Comments (30)</a></li>
+          </ul>
+          <div class="excerpt">
+            <time datetime="2045-04-04T08:15+00:00">03 Fevral 2022</time>
+            <p class="heading"><a href="{% url 'index_p' %}">Python dasturlash tilini mukammal o`rganish uchun video darsliklar</a></p>
+          </div>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a class="imgover" href="{% url 'index_dj' %}"><img src="{% static 'images/demo/348x261d.jpg' %}" alt=""></a>
+          <ul class="nospace meta clear">
+            <li><i class="fas fa-user"></i> <a href="{% url 'index_dj' %}">Admin</a></li>
+            <li><i class="fas fa-comments"></i> <a href="{% url 'index_dj' %}">Comments (25)</a></li>
+          </ul>
+          <div class="excerpt">
+            <time datetime="2045-04-03T08:15+00:00">03 Fevral 2022</time>
+            <p class="heading"><a href="{% url 'index_dj' %}">Django web frameworkni mukammal o`rganish uchun video darsliklar</a></p>
+          </div>
+        </article>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+{% endblock content %}

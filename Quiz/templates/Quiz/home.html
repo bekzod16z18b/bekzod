@@ -1,0 +1,107 @@
+
+{% extends 'Quiz/dependencies.html' %}
+
+{% block content %}
+{% load static %}
+<div class="container ">
+    <br>
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Online test tizimga xush kelibsiz!</h4>
+  <p>Bu yerda siz Obekitga yo'nalgan dasturlash, Axborot texnologiyalari, Texnik tizimlarda axborot texnologiyalari va Axborot texnologiyalari jarayonlarni matematik modellashtirish fanlardan o'z bilimlaringizni sinab ko'rishingiz mumkun.</p>
+  <hr>
+  <p class="mb-0">Qarshi muhandislik- iqtisodiyot instituti  Axborot texnologiyalari kafedirasi.</p>
+</div>
+
+
+    <div class="alert alert-secondary" role="alert"  id="displaytimer" align="right ">
+  Test yechish uchun vaqit boshlandi : 0 sekund!
+</div>
+
+ <form method='post' action=''>
+    {% csrf_token %}
+    {% for q  in questions %}
+
+   <!-- <div class="form-group">
+      <label for="question">{{q.question}}</label>
+    </div> -->
+     <div class="alert alert-primary" role="alert">
+  {{q.question}}!
+    </div>
+     <div class="form-check">
+          <!-- 1 -->
+                 <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input  type="radio" aria-label="Checkbox for following text input" name="{{q.question}}" id="gridRadios1" value="option1" >
+    </div>
+  </div>
+    <!----><input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="{{q.op1}}" for="gridRadios1">
+</div>
+          <!-- 1 -->
+
+          <!-- 2 -->
+         <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input  type="radio" aria-label="Checkbox for following text input" name="{{q.question}}" id="gridRadios2" value="option2" >
+    </div>
+  </div>
+  <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="{{q.op2}}" for="gridRadios2">
+</div>
+          <!-- 2 -->
+
+          <!-- 3 -->
+ <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input  type="radio" aria-label="Checkbox for following text input" name="{{q.question}}" id="gridRadios1" value="option3" >
+    </div>
+  </div>
+  <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="{{q.op3}}" for="gridRadios1">
+</div>
+          <!-- 3 -->
+
+          <!-- 4 -->
+ <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <div class="input-group-text">
+      <input  type="radio" aria-label="Checkbox for following text input" name="{{q.question}}" id="gridRadios2" value="option4" >
+    </div>
+  </div>
+  <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="{{q.op4}}" for="gridRadios2">
+</div>
+          <!-- 4 -->
+
+        <br>
+    </div>
+     <!-- SALOM-->
+
+<!-- SALOM-->
+    {% endfor %}
+    <input id='timer' type='hidden' name="timer" value="">
+    <br>
+   <button type="submit" class="btn btn-primary btn-lg btn-block">To'gatish</button>
+  </form>
+
+
+
+    {% block script %}
+        <script>
+
+            console.log('hello world')
+            const timer=document.getElementById('displaytimer')
+            console.log(timer.textContent)
+            const inputtag = document.getElementById('timer')
+
+            t=0
+            setInterval(()=>{
+                t+=1
+                timer.innerHTML ="<b>Test yechish uchun vaqit boshlandi: " +t+" sekund</b>"
+                inputtag.value = t
+            },1000)
+        </script>
+       {% endblock script %}
+
+</div>
+{% endblock %}
+ 

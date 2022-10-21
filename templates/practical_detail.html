@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container-fluid">
+        <div class="card" >
+          <div class="card-body">
+                {%  if object.photo %}
+                <img class="card-img-top" src="{{ object.photo.url }}" alt="{{ object.title }}">
+              {% endif %}
+              <h1 class="card-title">{{ object.title }}</h1>
+              <h6 class="card-subtitle mb-2 text-muted">Muallif: {{ object.author }} | {{ object.date }}</h6>
+              <p class="card-text">{{ object.body | safe}}</p>
+              <a href="{% url 'practical_edit' practical.pk %}">Tahrirlash</a> |
+              <a href="{% url 'practical_delete' practical.pk %}">O'chirish</a> |
+              <a href="{% url 'practical_list' %}">Barcha postlar</a>
+          </div>
+             <div class="card">
+                <div class="card-header"><a href="https://t.me/borland_uz"> Bizning ijtimoiy tarmoqlarimizni kuzatib boring</a> </div>
+            </div>
+        </div>
+        <p></p>
+    </div>
+{% endblock content %}

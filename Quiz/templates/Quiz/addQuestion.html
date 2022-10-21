@@ -1,0 +1,21 @@
+{% extends 'Quiz/dependencies.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="jumbotron container row">
+    <div class="col-md-12" >
+        <h1>Test qo'shish</h1>
+        <div class="card card-body" >
+           <form action="" method="POST" >
+              {% csrf_token %}
+                {{ form | crispy}}
+                <br>
+             <button type="submit" class="btn btn-primary btn-lg btn-block">Saqlash</button>
+             </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}
